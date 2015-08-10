@@ -8,5 +8,6 @@ module.exports = {
     this._super.included(app);
 
     app.import(app.bowerDirectory + '/normalize.css/normalize.css');
+    app.import(app.bowerDirectory + '/ember/ember-template-compiler.js');
   }
 };
