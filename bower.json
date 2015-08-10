@@ -14,6 +14,7 @@
     "qunit": "~1.17.1"
   },
   "devDependencies": {
-    "normalize.css": "~3.0.3"
+    "normalize.css": "~3.0.3",
+    "bootstrap": "~3.3.5"
   }
 }
