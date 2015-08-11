@@ -17,5 +17,13 @@ export default Mixin.create {
   init: function() {
     this.super();
     Binding.from('model.errors.' + this.get('propertyName').to('errors')).connect(this);
-  }
+  },
+
+  status: Em.computed('errors.length', function() {
+    if(this.get('errors.length')) {
+      return 'error'
+    } else {
+      return 'success';
+    }
+  })
 }
