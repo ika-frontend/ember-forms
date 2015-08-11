@@ -2,7 +2,7 @@ import Em from 'ember';
 import { test, module } from 'qunit';
 import InFormMixin from 'ember-ika-forms/mixins/in-form';
 import FormComponent from 'ember-ika-forms/components/form';
-
+import EmberValidations from 'ember-validations';
 var Component;
 
 module('Testing InForm Mixin', {
@@ -14,12 +14,14 @@ module('Testing InForm Mixin', {
 
 test('ParentView and model', function(assert) {
   var parentView = FormComponent.create();
-  parentView.set('model', {name: 'kkdashu'});
+  var Model = Em.Object.extend(EmberValidations);
+  var model = Model.create({name: 'kkdashu'});
+  parentView.set('model', model);
   var child = Component.create({
     parentView: parentView
   });
   assert.equal('form', child.get('form').get('tagName'));
-  assert.equal('kkdashu', child.get('model').name);
+  assert.equal(child.get('model').name, 'kkdashu');
 });
 
 test('ParentView is not a form', function(assert) {
