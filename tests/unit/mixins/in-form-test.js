@@ -3,18 +3,17 @@ import { test, module } from 'qunit';
 import InFormMixin from 'ember-ika-forms/mixins/in-form';
 import FormComponent from 'ember-ika-forms/components/form';
 
-var Component, ParentComponent;
+var Component;
 
 module('Testing InForm Mixin', {
   beforeEach: function() {
-    ParentComponent = FormComponent;
     Component = Em.Component.extend(InFormMixin, {
     });
   }
 });
 
 test('ParentView and model', function(assert) {
-  var parentView = ParentComponent.create();
+  var parentView = FormComponent.create();
   parentView.set('model', {name: 'kkdashu'});
   var child = Component.create({
     parentView: parentView
@@ -30,4 +29,19 @@ test('ParentView is not a form', function(assert) {
   });
   assert.equal(null, child.get('form'));
   assert.equal(null, child.get('model'));
+});
+
+test('Nested view', function(assert) {
+  var view1 = Em.Component.create(),
+      view2 = FormComponent.create({
+        parentView: view1,
+        model: {name: 'kkdashu'}
+      }),
+      view3 = Em.Component.create({
+        parentView: view2
+      }),
+      view = Component.create({
+        parentView: view3
+      });
+  assert.equal('kkdashu', view.get('model').name);
 });
