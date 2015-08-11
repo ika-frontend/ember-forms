@@ -1,7 +1,7 @@
 import { Em, Mixin, Binding, assert } from 'ember';
 
 
-export default Mixin.create {
+export default Mixin.create({
   property: null,
 
   propertyName: Em.computed('parentView.property', function() {
@@ -21,9 +21,9 @@ export default Mixin.create {
 
   status: Em.computed('errors.length', function() {
     if(this.get('errors.length')) {
-      return 'error'
+      return 'error';
     } else {
       return 'success';
     }
   })
-}
+});
