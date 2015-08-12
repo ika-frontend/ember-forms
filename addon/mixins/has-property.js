@@ -1,7 +1,7 @@
-import { Em, Mixin, Binding, assert } from 'ember';
+import Em from 'ember';
 
 
-export default Mixin.create({
+export default Em.Mixin.create({
   property: null,
 
   propertyName: Em.computed('parentView.property', function() {
@@ -10,13 +10,13 @@ export default Mixin.create({
     } else if(this.get('parentView.property')) {
       return this.get('parentView.property');
     } else {
-      assert(false, 'Property could not be found.');
+      Em.assert(false, 'Property could not be found.');
     }
   }),
 
   init: function() {
-    this.super();
-    Binding.from('model.errors.' + this.get('propertyName').to('errors')).connect(this);
+    this._super();
+    Em.Binding.from('model.errors.' + this.get('propertyName')).to('errors').connect(this);
   },
 
   status: Em.computed('errors.length', function() {
