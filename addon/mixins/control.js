@@ -1,12 +1,13 @@
-import { Em } from 'ember';
+import Em from 'ember';
 
 export default Em.Mixin.create({
+  classNames: ['form-control'],
   hasValue: Em.computed('value', function() {
     return this.get('value');
   }),
 
   init: function() {
-    this.super();
-    //Em.Binding.from("model.#{this.get('propertyName')}").to('value').connect(this);
+    this._super();
+    Em.Binding.from("model." + this.get('propertyName')).to('value').connect(this);
   }
 });

@@ -1,3 +1,3 @@
-import EmInputComponent from 'em-ika-forms/components/input';
+import EmInputComponent from 'ember-ika-forms/components/input';
 
 export default EmInputComponent;

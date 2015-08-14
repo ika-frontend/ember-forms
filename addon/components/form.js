@@ -10,6 +10,7 @@ import ContainerMixin from 'ember-ika-layouts/mixins/container';
  */
 export default Em.Component.extend(ContainerMixin, {
   tagName: 'form',
+  isFluid: true,
   attributeBindings: ['role', 'fixed-id'],
   role: 'form',
 

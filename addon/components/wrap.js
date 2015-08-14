@@ -6,6 +6,8 @@ import ColMixin from 'ember-ika-layouts/mixins/col';
 export default Em.Component.extend(ColMixin, InFormMixin, HasPropertyMixin, {
   classNames: ['form-group'],
   classNameBindings: ['class', 'hasSuccess', 'hasError'],
+  layoutName: 'components/form-wrap',
+  label: void 0,
   canShowErrors: false,
   needValidation: true,
   hasSuccess: Em.computed('status', function() {

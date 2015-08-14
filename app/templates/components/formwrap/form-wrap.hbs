@@ -1,7 +1,4 @@
-{{#unless template}}
-  {{#if label}}
-    {{label}}
-  {{/if}}
-{{else}}
-  {{yield}}
-{{/unless}}
+{{#if label}}
+  {{em-label text=label viewName=labelViewName}}
+{{/if}}
+{{partial 'components/formwrap/form-wrap-control'}}
