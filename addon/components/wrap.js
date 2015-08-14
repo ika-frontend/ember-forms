@@ -19,7 +19,7 @@ export default Em.Component.extend(ColMixin, InFormMixin, HasPropertyMixin, {
   required: Em.computed(function() {
     var propertyName = this.get('propertyName'),
         model = this.get('model');
-    if(model && model.validations && model.validations[propertyName].presence) {
+    if(model && model.validations && model.validations[propertyName] && model.validations[propertyName].presence) {
       return true;
     }
     return false;
