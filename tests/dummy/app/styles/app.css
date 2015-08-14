@@ -17,3 +17,21 @@ ul {
   float: left;
   margin-left: 20px;
 }
+
+.sidebar {
+  padding-top: 20px;
+  padding-left: 20px;
+  border: 1px solid #ccc;
+  min-height: 500px;
+}
+
+.sidebar li {
+  border-bottom: 1px solid #ccc;
+}
+
+.sidebar li:last-child {
+  border-bottom: none;
+}
+.sidebar li a.active {
+  color: #FF5500;
+}
