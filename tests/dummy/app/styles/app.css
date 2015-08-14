@@ -1,18 +1,19 @@
-header nav {
-  margin-left: 5em;
-}
-
-header nav ul {
+ul {
   list-style: none;
-}
-header nav ul, header nav ul li {
   margin: 0;
   padding: 0;
 }
-header nav ul li:first {
-  margin-left: 0;
+
+.header {
+
 }
-header nav ul li {
+
+.header ul {
+  margin-top:20px;
+  margin-bottom: 10px;
+}
+
+.header ul li {
   float: left;
-  margin-left: 2em;
+  margin-left: 20px;
 }

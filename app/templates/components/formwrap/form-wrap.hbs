@@ -1,2 +1,7 @@
-formwrap
-{{yield}}
+{{#unless template}}
+  {{#if label}}
+    {{label}}
+  {{/if}}
+{{else}}
+  {{yield}}
+{{/unless}}
