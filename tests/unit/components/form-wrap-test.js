@@ -1,20 +1,14 @@
 import Em from 'ember';
 import { test, module } from 'qunit';
 import EmFormComponent from 'ember-ika-forms/components/form';
-import EV from 'ember-validations';
 import EmFormWrapComponent from 'ember-ika-forms/components/wrap';
 
-var Model = Em.Object.extend(EV, {
-  validations: {
-    name: {
-      presence: true,
-      length: { minimum: 5 }
-    }
-  }
-});
-var model = undefined;
+var Model = Em.Object.extend();
+var model = null;
 Em.run(function() {
-  model = Model.create();
+  model = Model.create({
+    name: 'kkdashu'
+  });
 });
 
 var emFormComponent = EmFormComponent.create({
