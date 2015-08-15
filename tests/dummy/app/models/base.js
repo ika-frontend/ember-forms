@@ -1,7 +1,11 @@
 import Em from 'ember';
 import EV from 'ember-validations';
-import { buildContainer } from '../helpers/build-container';
+import App from 'dummy/app';
 
 export default Em.Object.extend(EV, {
-  container: buildContainer()
+  /**
+   * 临时解决方案
+   * 指定container
+   **/
+  container: window.Dummy.__container__
 });
