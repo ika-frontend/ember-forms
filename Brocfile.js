@@ -12,8 +12,8 @@ var app = new EmberAddon();
   behave. You most likely want to be modifying `./index.js` or app's Brocfile
 */
 
-//app.import(app.bowerDirectory + '/moment/moment.js');
-//app.import(app.bowerDirectory + '/moment/locale/de-at.js');
+//app.import(app.bowerDirectory + '/select2/dist/css/select2.css');
+//app.import(app.bowerDirectory + '/select2/dist/js/select2.js');
 //app.import(app.bowerDirectory + '/pikaday/pikaday.js');
 //app.import(app.bowerDirectory + '/pikaday/css/pikaday.css');
 
