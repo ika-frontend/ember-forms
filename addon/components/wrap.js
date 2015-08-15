@@ -2,8 +2,9 @@ import Em from 'ember';
 import InFormMixin from 'ember-ika-forms/mixins/in-form';
 import HasPropertyMixin from 'ember-ika-forms/mixins/has-property';
 import ColMixin from 'ember-ika-layouts/mixins/col';
+import WrapMixin from '../mixins/wrap';
 
-export default Em.Component.extend(ColMixin, InFormMixin, HasPropertyMixin, {
+export default Em.Component.extend(ColMixin, InFormMixin, HasPropertyMixin, WrapMixin, {
   classNames: ['form-group'],
   classNameBindings: ['class', 'hasSuccess', 'hasError'],
   layoutName: 'components/form-wrap',

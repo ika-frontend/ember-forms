@@ -1,7 +1,7 @@
 {{#if label}}
   {{em-label text=label viewName=labelViewName}}
 {{/if}}
-{{partial 'components/formwrap/form-wrap-control'}}
+{{view controlView viewName=controlViewName property=propertyName id=cid}}
 {{#if hasError}}
   <span class="help-block">{{errorMsg}}</span>
 {{/if}}
