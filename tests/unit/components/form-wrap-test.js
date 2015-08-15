@@ -1,7 +1,5 @@
 import Em from 'ember';
-import { test, module } from 'qunit';
-import EmFormComponent from 'ember-ika-forms/components/form';
-import EmFormWrapComponent from 'ember-ika-forms/components/wrap';
+import { module } from 'qunit';
 
 var Model = Em.Object.extend();
 var model = null;
@@ -11,9 +9,6 @@ Em.run(function() {
   });
 });
 
-var emFormComponent = EmFormComponent.create({
-  model: model
-});
 
 module('Testing EmFormComponent', {
   beforeEach: function() {
@@ -21,16 +16,3 @@ module('Testing EmFormComponent', {
   }
 });
 
-test('col与model属性是否正确', function(assert) {
-  var formWrap = EmFormWrapComponent.create({
-    parentView: emFormComponent,
-    col: 2,
-    property: 'name'
-  });
-  Em.run(function() {
-    formWrap.append();
-  });
-  assert.ok(formWrap.$().hasClass('col-md-2'));
-  assert.equal(formWrap.get('model').name, 'kkdashu');
-  console.log(formWrap.get('model'));
-});

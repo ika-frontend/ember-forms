@@ -1,5 +1,5 @@
 import Em from 'ember';
-import CompanyModel from '../../models/company'
+import CompanyModel from '../../models/company';
 
 export default Em.Route.extend({
   model: function() {

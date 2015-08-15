@@ -19,4 +19,4 @@ export default FormWrapComponent.extend({
   required: void 0,
   autofocus: void 0,
   disabled: void 0
-})
+});

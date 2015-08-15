@@ -29,7 +29,7 @@ export default Em.Mixin.create({
 
   errorMsg: Em.computed('status', function() {
     if(this.get('status') === 'error') {
-      return this.get('errors').toString()
+      return this.get('errors').toString();
     }
   })
 });

@@ -1,6 +1,5 @@
 import Em from 'ember';
 import EV from 'ember-validations';
-import App from 'dummy/app';
 
 export default Em.Object.extend(EV, {
   /**
