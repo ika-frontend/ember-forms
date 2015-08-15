@@ -14,7 +14,7 @@ export default FormWrapComponent.extend({
     propertyName: Em.computed.alias('parentView.propertyName')
   }),
   property: void 0,
-  label: '',
+  label: void 0,
   placeholder: void 0,
   required: void 0,
   autofocus: void 0,
