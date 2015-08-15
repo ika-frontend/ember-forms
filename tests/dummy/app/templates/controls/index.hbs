@@ -1,6 +1,20 @@
-{{#em-form}}
+{{#em-form model=model}}
   {{#em-row}}
-    {{em-input label="name" placeholder="name"}}
-    {{em-input label="password" lable="password" placeholder="password" type="password"}}
+    {{em-input property="name" label="name" placeholder="name"}}
+    {{em-input property="password" label="password" placeholder="password" type="password"}}
+  {{/em-row}}
+  {{#em-row}}
+    {{em-select
+      content=countries
+      property="country"
+      prompt="--请选择国家--"
+    }}
+    {{em-select
+      content=provinces
+      property="province"
+      optionValuePath="content.id"
+      optionLabelPath="content.name"
+      prompt="--请选择所在省份--"
+    }}
   {{/em-row}}
 {{/em-form}}
