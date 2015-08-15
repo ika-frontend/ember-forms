@@ -25,5 +25,11 @@ export default Em.Mixin.create({
     } else {
       return 'success';
     }
+  }),
+
+  errorMsg: Em.computed('status', function() {
+    if(this.get('status') === 'error') {
+      return this.get('errors').toString()
+    }
   })
 });

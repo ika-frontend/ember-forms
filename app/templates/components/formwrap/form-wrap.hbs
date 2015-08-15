@@ -2,3 +2,6 @@
   {{em-label text=label viewName=labelViewName}}
 {{/if}}
 {{partial 'components/formwrap/form-wrap-control'}}
+{{#if hasError}}
+  <span class="help-block">{{errorMsg}}</span>
+{{/if}}
