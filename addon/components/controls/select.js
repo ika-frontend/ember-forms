@@ -17,7 +17,7 @@ var SelectComponent = Em.Select.extend(ControlMixin, {
     optionLabelPath: Em.computed.alias('parentView.optionLabelPath'),
     selection: Em.computed.alias('parentView.selection'),
     prompt: Em.computed.alias('parentView.prompt')
-})
+});
 
 
 export default generateComponent(SelectWrapComponent, SelectComponent);

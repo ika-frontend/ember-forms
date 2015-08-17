@@ -14,8 +14,8 @@ var Select2Component = SelectComponent.extend({
     this.$().select2({
       allowClean: this.get('allowClean'),
       placeholder: this.get('placeholder')
-    })
+    });
   }
-})
+});
 
 export default generateComponent(Select2WrapComponent, Select2Component);
