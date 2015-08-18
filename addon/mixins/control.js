@@ -1,10 +1,11 @@
 import Em from 'ember';
 
 export default Em.Mixin.create({
-  classNames: ['form-control'],
+  classNameBindings: ['isInput:form-control'],
   hasValue: Em.computed('value', function() {
     return this.get('value');
   }),
+  isInput: true,
   attributeBindings: ['placeholder', 'required', 'autofocus', 'disabled', 'name'],
   placeholder: Em.computed.alias('parentView.placeholder'),
   required: Em.computed.alias('parentView.required'),

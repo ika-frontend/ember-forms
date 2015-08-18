@@ -9,5 +9,14 @@ var provinces = Em.A([
 
 export default Em.Controller.extend({
   countries: countries,
-  provinces: provinces
+  provinces: provinces,
+  actions: {
+    submit: function(promise) {
+      promise(new Em.RSVP.Promise(function(resolve, reject) {
+          Em.run.later(function() {
+            resolve({ msg: 'success'});
+          }, 3000);
+      }));
+    }
+  }
 });

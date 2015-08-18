@@ -2,6 +2,8 @@
   {{em-label text=label viewName=labelViewName}}
 {{/if}}
 {{view controlView viewName=controlViewName property=propertyName}}
-{{#if hasError}}
-  <span class="help-block">{{errorMsg}}</span>
+{{#if needValidation}}
+  {{#if hasError}}
+    <span class="help-block">{{errorMsg}}</span>
+  {{/if}}
 {{/if}}
