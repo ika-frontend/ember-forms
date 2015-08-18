@@ -38,8 +38,9 @@ var ButtonWrapComponent = FormWrap.extend({
    * 再触发om-click事件
    */
   onClick () {
-    var self = this;
-    var form = this.get('form');
+    var self = this,
+        form = this.get('form');
+    form.set('canShowErrors', true);
     if(!form.isValidate()) {
        return;
     }

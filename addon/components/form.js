@@ -13,6 +13,7 @@ export default Em.Component.extend(ContainerMixin, {
   isFluid: true,
   attributeBindings: ['role', 'fixed-id'],
   role: 'form',
+  canShowErrors: false,
 
   isValidate () {
     var model = this.get('model'),

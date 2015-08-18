@@ -6,6 +6,7 @@ import WrapMixin from '../mixins/wrap';
 
 export default Em.Component.extend(ColMixin, InFormMixin, HasPropertyMixin, WrapMixin, {
   classNameBindings: ['class', 'hasSuccess', 'hasError'],
+  classNames: ['form-group'],
   layoutName: 'components/form-wrap',
   label: void 0,
   canShowErrors: false,
@@ -13,8 +14,8 @@ export default Em.Component.extend(ColMixin, InFormMixin, HasPropertyMixin, Wrap
   hasSuccess: Em.computed('status', function() {
     return this.get('status') === 'success';
   }),
-  hasError: Em.computed('status', function() {
-    return this.get('status') === 'error';
+  hasError: Em.computed('status', 'form.canShowErrors', function() {
+    return this.get('status') === 'error' && this.get('form.canShowErrors');
   }),
   required: Em.computed(function() {
     var propertyName = this.get('propertyName'),
