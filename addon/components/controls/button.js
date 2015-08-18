@@ -39,6 +39,10 @@ var ButtonWrapComponent = FormWrap.extend({
    */
   onClick () {
     var self = this;
+    var form = this.get('form');
+    if(!form.isValidate()) {
+       return;
+    }
     this.sendAction('on-click', function(promise) {
       self.set('promise', promise);
       self.set('status', 'executing');
