@@ -1,25 +1,23 @@
-# Ember-components
+# Ember-forms
 
-This README outlines the details of collaborating on this Ember addon.
+ember-forms是基于ember的表单组件库
 
-## Installation
+## 安装
 
 * `git clone` this repository
 * `npm install`
 * `bower install`
 
-## Running
+## 运行
 
 * `ember server`
 * Visit your app at http://localhost:4200.
 
-## Running Tests
+## 测试
 
 * `ember test`
 * `ember test --server`
 
-## Building
+## 构建
 
 * `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
