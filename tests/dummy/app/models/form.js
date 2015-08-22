@@ -11,6 +11,9 @@ export default Base.extend({
     },
     country: {
       presence: true
+    },
+    province: {
+      presence: true
     }
   }
 });
