@@ -1,7 +1,18 @@
-{{#if label}}
-  {{em-label text=label viewName=labelViewName}}
+{{#unless noLabelWrap}}
+  {{#if label}}
+    {{em-label text=label viewName=labelViewName}}
+  {{/if}}
+{{/unless}}
+{{#if controlWrapClass}}
+  <div {{bind-attr class=controlWrapClass}}>
+    {{#if yieldLabel}}
+      {{view controlView viewName=controlViewName property=propertyName}}
+      {{label}}
+    {{/if}}
+  </div>
+{{else}}
+  {{view controlView viewName=controlViewName property=propertyName}}
 {{/if}}
-{{view controlView viewName=controlViewName property=propertyName}}
 {{#if needValidation}}
   {{#if hasError}}
     <span class="help-block">{{errorMsg}}</span>
