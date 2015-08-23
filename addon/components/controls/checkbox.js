@@ -17,8 +17,7 @@ var ControlView = Em.Checkbox.extend(ControlMixin, {
 var CheckboxWrapComponent = FormWrapComponent.extend({
   yieldLabel: true,
   controlWrapClass: 'checkbox',
-  noLabelWrap: true,
-  classNames: ['checkbox']
+  noLabelWrap: true
 })
 
 export default generateComponent(CheckboxWrapComponent, ControlView);

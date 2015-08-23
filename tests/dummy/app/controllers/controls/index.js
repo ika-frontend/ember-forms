@@ -12,7 +12,7 @@ export default Em.Controller.extend({
   provinces: provinces,
   actions: {
     submit: function(promise) {
-      promise(new Em.RSVP.Promise(function(resolve, reject) {
+      promise(new Em.RSVP.Promise(function(resolve) {
           Em.run.later(function() {
             resolve({ msg: 'success'});
           }, 3000);

@@ -4,12 +4,12 @@
   {{/if}}
 {{/unless}}
 {{#if controlWrapClass}}
-  <div {{bind-attr class=controlWrapClass}}>
+  <label {{bind-attr class=controlWrapClass}}>
     {{#if yieldLabel}}
       {{view controlView viewName=controlViewName property=propertyName}}
       {{label}}
     {{/if}}
-  </div>
+  </label>
 {{else}}
   {{view controlView viewName=controlViewName property=propertyName}}
 {{/if}}
